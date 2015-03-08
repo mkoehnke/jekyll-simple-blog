@@ -1,0 +1,35 @@
+---
+layout: base
+---
+
+<section id="wrapper-photo" class="group">
+<header>
+<a id="title" href="/">
+  <img src="{{ site.baseurl }}/images/logo.png" style="width: 3em">
+</a>
+</header>
+
+{{ content }}
+
+<footer>
+<nav id="post-nav">
+	<span class="prev">
+		{% if page.previous %}
+			<a href='{{ site.baseurl }}{{ page.previous.url }}'>
+				<span class="arrow">&larr;</span> {{ page.previous.title }}
+			</a>
+		{% endif %}
+	</span>
+	
+
+	<span class="next">
+		{% if page.next %}
+			<a href='{{ site.baseurl }}{{ page.next.url }}'>
+				{{ page.next.title }} <span class="arrow">&rarr;</span>
+			</a>
+		{% endif %}
+	</span>
+</nav>
+</footer>
+
+</section> <!--wrapper-->
